@@ -57,3 +57,6 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "rodauth-rails", "~> 1.15"
+gem "webauthn", "~> 3.1"
