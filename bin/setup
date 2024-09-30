@@ -2,7 +2,7 @@
 require "fileutils"
 
 APP_ROOT = File.expand_path("..", __dir__)
-APP_NAME = "rodauth-passkey-option"
+APP_NAME = "rodauth-passkeys"
 
 def system!(*args)
   system(*args, exception: true)
