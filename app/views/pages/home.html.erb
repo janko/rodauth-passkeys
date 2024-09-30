@@ -1,2 +1,9 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<ul>
+  <% if rodauth.logged_in? %>
+    <li><%= link_to "#{current_account.password_hash ? "Change" : "Set"} password", rodauth.change_password_path %></li>
+    <li><%= link_to "Create passkey", rodauth.webauthn_setup_path %></li>
+    <li><%= link_to "Logout", rodauth.logout_path, data: { turbo_method: :post } %></li>
+  <% else %>
+    <li><%= link_to "Login", rodauth.login_path %></li>
+  <% end %>
+</ul>
